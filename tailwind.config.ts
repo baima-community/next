@@ -8,6 +8,12 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        primary: 'rgb(242,103,37)'
+      },
+      fontFamily: {
+        helvetica: ['Helvetica', 'Arial', 'sans-serif'],
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

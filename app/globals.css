@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --font-helvetica: 'Helvetica', Arial, sans-serif;
+  --foreground-rgb: #212123;
+  --page-background: rgb(249,249,249);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -16,18 +16,34 @@
   }
 }
 
-body {
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-helvetica);
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: var(--page-background);
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+  
+}
+
+@layer components {
+  .flex-center {
+    @apply flex items-center justify-center
+  }
+  .flex-between {
+    @apply flex items-center justify-between
+  }
+  .flex-start {
+    @apply flex items-center justify-start
+  }
+  .flex-end {
+    @apply flex items-center justify-end
   }
 }
